@@ -1,0 +1,6 @@
+# Render uses this to start the production web server
+# gunicorn: production WSGI server (replaces Django dev server)
+# --workers: 2 workers (good for Render's free tier with 512MB RAM)
+# --log-file -: log to stdout so Render captures it
+# --timeout 120: raise timeout for slow email sends
+web: gunicorn jobmailer.wsgi:application --workers 2 --log-file - --timeout 120 --bind 0.0.0.0:$PORT

@@ -1,0 +1,31 @@
+# ── Core ──────────────────────────────────────────────────────────────────────
+django>=5.0,<7.0
+django-allauth>=0.63.0
+
+# ── Auth & Encryption ─────────────────────────────────────────────────────────
+cryptography>=42.0.0
+PyJWT>=2.1.0
+
+# ── AI ────────────────────────────────────────────────────────────────────────
+google-generativeai>=0.5.0
+
+# ── Env & Config ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── Media ─────────────────────────────────────────────────────────────────────
+Pillow>=10.0.0
+
+# ── REST API (optional extensions) ────────────────────────────────────────────
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+
+# ── Production: WSGI server ───────────────────────────────────────────────────
+gunicorn>=21.0.0
+
+# ── Production: Static files (WhiteNoise serves static without a CDN) ─────────
+whitenoise>=6.6.0
+
+# ── Production: PostgreSQL database driver ─────────────────────────────────────
+psycopg2-binary>=2.9.0          # binary wheel — no libpq needed on Render
+dj-database-url>=2.1.0          # parses DATABASE_URL → Django DATABASES dict
