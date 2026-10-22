@@ -18,7 +18,7 @@ services:
       - key: DJANGO_ENV
         value: prod
       - key: DJANGO_SETTINGS_MODULE
-        value: jobmailer.settings
+        value: jobmailer.settings.prod
       - key: SECRET_KEY
         generateValue: true   # Render auto-generates a secure random value
       - key: DEBUG

@@ -9,9 +9,9 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 echo "==> Collecting static files..."
-python manage.py collectstatic --no-input
+python manage.py collectstatic --no-input --settings=jobmailer.settings.prod
 
 echo "==> Applying database migrations..."
-python manage.py migrate --no-input
+python manage.py migrate --no-input --settings=jobmailer.settings.prod
 
 echo "==> Build complete ✓"
